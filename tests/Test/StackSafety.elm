@@ -18,14 +18,14 @@ tests =
             \_ ->
                 let
                     bigInput =
-                        List.repeat 50000 0x00
+                        List.repeat 7500 0x00
                 in
                     Expect.greaterThan 0 (String.length (encode bigInput))
         , test "decode big input" <|
             \_ ->
                 let
                     bigInput =
-                        String.repeat 50000 "0"
+                        String.repeat 7500 "0"
                 in
                     case decode bigInput of
                         Ok a ->

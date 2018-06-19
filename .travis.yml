@@ -52,4 +52,4 @@ install:
 script:
   # - elm-format --validate src/
   # - elm-analyse
-  - elm-test --compiler ./elm
+  - export PATH=$PATH:$PWD && elm-test
